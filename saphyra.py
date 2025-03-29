@@ -19,10 +19,10 @@ METHOD_GET  = 'get'
 METHOD_POST = 'post'
 METHOD_RAND = 'random'
 
-JOIN_TIMEOUT=1.0
+JOIN_TIMEOUT=5.0
 
 DEFAULT_WORKERS=100
-DEFAULT_SOCKETS=1000
+DEFAULT_SOCKETS=100000
 
 
 with open('lists/useragents.txt') as f:
@@ -514,7 +514,7 @@ def main():
 
         workers = DEFAULT_WORKERS
         socks = DEFAULT_SOCKETS
-        method = METHOD_RAND
+        method = METHOD_GET
 
         uas_file = None
         useragents = []
